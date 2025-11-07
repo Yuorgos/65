@@ -1,0 +1,15 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    title Кабінет користувача
+    style
+      | body { font-family: sans-serif; padding: 20px; }
+  body
+    h1 Особистий кабінет
+    if user
+      p Вітаємо, #{user.username}!
+      a(href="/logout") Вийти
+    else
+      p Ви не авторизовані.
+      a(href="/login") Увійти

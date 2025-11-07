@@ -1,0 +1,20 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    title Реєстрація
+    style
+      | body { font-family: sans-serif; padding: 20px; }
+  body
+    h1 Реєстрація користувача
+    form(action="/register" method="POST")
+      label(for="username") Логін:
+      input(type="text" name="username" required)
+      br
+      label(for="password") Пароль:
+      input(type="password" name="password" required)
+      br
+      button(type="submit") Зареєструватися
+    p
+      | Вже маєте акаунт?
+      a(href="/login") Увійти

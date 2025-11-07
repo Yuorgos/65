@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Користувачі з MongoDB
+  body
+    h1 Список користувачів
+    ul
+      each user in users
+        li #{user.username}
+    a(href="/dashboard") Назад

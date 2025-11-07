@@ -1,0 +1,22 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    title Вхід
+    style
+      | body { font-family: sans-serif; padding: 20px; }
+  body
+    h1 Вхід у систему
+if query && query.error
+  p(style="color: red") ❌ Невірні дані користувача
+    form(action="/login" method="POST")
+      label(for="username") Логін:
+      input(type="text" name="username" required)
+      br
+      label(for="password") Пароль:
+      input(type="password" name="password" required)
+      br
+      button(type="submit") Увійти
+    p
+      | Немає акаунта?
+      a(href="/register") Зареєструватися
